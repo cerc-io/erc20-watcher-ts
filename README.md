@@ -1,8 +1,8 @@
 # ERC20 Watcher
 
-First try the [erc20 demo in stack orchestrator](https://github.com/cerc-io/stack-orchestrator/tree/main/app/data/stacks/erc20) to quickly get started. Advanced users can see [here](/docs/README.md) for instructions on setting up a local environment by hand. 
+First try the [erc20 demo in stack orchestrator](https://github.com/cerc-io/stack-orchestrator/tree/main/app/data/stacks/erc20) to quickly get started. Advanced users can see [here](https://github.com/cerc-io/watcher-ts/tree/main/docs) for instructions on setting up a local environment by hand.
 
-## Build 
+## Build
 
 Build files:
 
@@ -10,8 +10,8 @@ Build files:
 yarn build
 ```
 
-## Run 
-  
+## Run
+
 Start the job runner:
 
 ```bash
@@ -49,7 +49,7 @@ In the output you'll see:
 ```bash
 GLD Token deployed to: 0xTokenAddress
 ```
-  
+
 Export the address of the deployed token to a shell variable for later use:
 
 ```bash

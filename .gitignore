@@ -1,6 +1,13 @@
+.idea
+.vscode
 node_modules/
 dist/
 out/
+build/
+tmp/
+temp/
 
-.vscode
-.idea
+#Hardhat files
+cache
+artifacts
+
