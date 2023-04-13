@@ -1,12 +1,13 @@
 {
-  "name": "@cerc-io/erc20-watcher",
+  "name": "@cerc-io/erc20-watcher-ts",
   "version": "0.2.34",
   "description": "ERC20 Watcher",
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings=0 .",
     "build": "tsc",
+    "prepare": "husky install",
     "server": "DEBUG=vulcanize:* YARN_CHILD_PROCESS=true node --enable-source-maps dist/server.js",
     "server:dev": "DEBUG=vulcanize:* YARN_CHILD_PROCESS=true ts-node src/server.ts",
     "job-runner": "DEBUG=vulcanize:* YARN_CHILD_PROCESS=true node --enable-source-maps dist/job-runner.js",
@@ -32,14 +33,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerc-io/watcher-ts.git"
+    "url": "git+https://github.com/cerc-io/erc20-watcher-ts.git"
   },
   "author": "",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/cerc-io/watcher-ts/issues"
+    "url": "https://github.com/cerc-io/erc20-watcher-ts/issues"
   },
-  "homepage": "https://github.com/cerc-io/watcher-ts#readme",
+  "homepage": "https://github.com/cerc-io/erc20-watcher-ts#readme",
   "dependencies": {
     "@apollo/client": "^3.3.19",
     "@cerc-io/cli": "^0.2.34",
@@ -73,6 +74,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
     "hardhat": "^2.3.0",
+    "husky": "^7.0.2",
     "nodemon": "^2.0.7",
     "ts-node": "^10.2.1",
     "typescript": "^5.0.2"
