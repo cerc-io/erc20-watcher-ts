@@ -5,7 +5,7 @@
 import { task, types } from 'hardhat/config';
 import '@nomiclabs/hardhat-ethers';
 
-task('token-balance', 'Move tokens to recipient')
+task('token-balance', 'Check token balance for an account')
   .addParam('token', 'Token contract address', undefined, types.string)
   .addParam('account', 'Account address', undefined, types.string)
   .setAction(async (args, hre) => {
