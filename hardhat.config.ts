@@ -2,6 +2,8 @@
 // Copyright 2021 Vulcanize, Inc.
 //
 
+import 'dotenv/config';
+
 import '@nomiclabs/hardhat-waffle';
 
 import './test/tasks/token-deploy';

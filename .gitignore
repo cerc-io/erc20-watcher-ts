@@ -10,4 +10,4 @@ temp/
 #Hardhat files
 cache
 artifacts
-
+.env
