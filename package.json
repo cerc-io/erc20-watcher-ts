@@ -20,6 +20,8 @@
     "token:deploy:docker": "hardhat --network docker token-deploy",
     "token:transfer": "hardhat --network localhost token-transfer",
     "token:transfer:docker": "hardhat --network docker token-transfer",
+    "token:balance": "hardhat --network localhost token-balance",
+    "token:balance:docker": "hardhat --network docker token-balance",
     "token:approve": "hardhat --network localhost token-approve",
     "token:approve:docker": "hardhat --network docker token-approve",
     "token:transfer-from": "hardhat --network localhost token-transfer-from",
