@@ -12,7 +12,6 @@ import JSONbig from 'json-bigint';
 import { ethers } from 'ethers';
 import { BaseProvider } from '@ethersproject/providers';
 
-import { EthClient } from '@cerc-io/ipld-eth-client';
 import { MappingKey, StorageLayout } from '@cerc-io/solidity-mapper';
 import {
   IndexerInterface,
@@ -25,7 +24,8 @@ import {
   StateStatus,
   DatabaseInterface,
   Clients,
-  StateKind
+  StateKind,
+  EthClient
 } from '@cerc-io/util';
 
 import { Database, ENTITIES } from './database';
@@ -477,6 +477,10 @@ export class Indexer implements IndexerInterface {
 
   async getBlocksAtHeight (height: number, isPruned: boolean): Promise<BlockProgress[]> {
     return this._baseIndexer.getBlocksAtHeight(height, isPruned);
+  }
+
+  async fetchEventsAndSaveBlocks (blocks: DeepPartial<BlockProgress>[]): Promise<{ blockProgress: BlockProgress, events: DeepPartial<Event>[] }[]> {
+    return this._baseIndexer.fetchEventsAndSaveBlocks(blocks, this.parseEventNameAndArgs.bind(this));
   }
 
   async saveBlockAndFetchEvents (block: DeepPartial<BlockProgress>): Promise<[BlockProgress, DeepPartial<Event>[]]> {
